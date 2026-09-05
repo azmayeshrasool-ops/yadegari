@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>یادگاری</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖼️</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page">
+
+  <header class="title">
+    <h1>یادگاری</h1>
+  </header>
+
+  <section class="clock">
+    <div class="ticker" dir="ltr">
+      <span id="days">00</span><b>:</b><span id="hours">00</span><b>:</b><span id="minutes">00</span><b>:</b><span id="seconds">00</span>
+    </div>
+  </section>
+
+  <section class="box carousel">
+    <button class="nav" id="carPrev" type="button" aria-label="قبلی">&lt;</button>
+    <div class="frame">
+      <img id="carImg" src="1.png" alt="عکس یادگاری اول" loading="lazy">
+    </div>
+    <button class="nav" id="carNext" type="button" aria-label="بعدی">&gt;</button>
+  </section>
+
+  <p class="counter" id="carCount" dir="ltr">۱ / ۴</p>
+
+  <footer class="keep">
+    <p class="keep-line">اینو نگه داشتم به یادگاری. رسول ۱۴ شهریور ۱۴۰۵.</p>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

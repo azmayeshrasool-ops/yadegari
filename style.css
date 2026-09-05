@@ -1,0 +1,189 @@
+@font-face {
+  font-family: "IBM Plex Sans Arabic";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/ibm-plex-sans-arabic-400-arabic.woff2") format("woff2");
+  unicode-range: U+0600-06FF, U+0750-077F, U+FB50-FDFF, U+FE70-FEFC, U+200C-200E;
+}
+@font-face {
+  font-family: "IBM Plex Sans Arabic";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/ibm-plex-sans-arabic-400-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+2000-206F;
+}
+@font-face {
+  font-family: "IBM Plex Sans Arabic";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/ibm-plex-sans-arabic-700-arabic.woff2") format("woff2");
+  unicode-range: U+0600-06FF, U+0750-077F, U+FB50-FDFF, U+FE70-FEFC, U+200C-200E;
+}
+@font-face {
+  font-family: "IBM Plex Sans Arabic";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/ibm-plex-sans-arabic-700-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+2000-206F;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/ibm-plex-mono-400-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+2000-206F;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/ibm-plex-mono-700-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+2000-206F;
+}
+
+:root {
+  --bg:     #0b0f0c;
+  --box:    #0e130f;
+  --border: #204429;
+  --green:  #46c26d;
+  --text:   #c9d1cb;
+  --muted:  #6b7871;
+  --font:      "IBM Plex Sans Arabic", Tahoma, sans-serif;
+  --font-mono: "IBM Plex Mono", Consolas, "Courier New", monospace;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+  font-family: var(--font);
+  background: var(--bg);
+}
+
+.page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 48px 16px 64px;
+}
+
+.box {
+  background: var(--box);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+}
+
+/* ---------- title ---------- */
+
+.title {
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--green);
+}
+
+/* ---------- clock ---------- */
+
+.clock {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.ticker {
+  font-family: var(--font-mono);
+  font-size: 32px;
+  letter-spacing: 2px;
+  color: var(--green);
+  font-variant-numeric: tabular-nums;
+}
+
+.ticker b {
+  font-weight: 400;
+  color: var(--muted);
+  margin: 0 2px;
+}
+
+/* ---------- carousel ---------- */
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 22px;
+  padding: 16px;
+}
+
+.frame {
+  flex: 1 1 auto;
+  max-width: 440px;
+  background: #000;
+  border: 1px solid var(--border);
+}
+
+.frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.nav {
+  flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+.nav:hover { opacity: 1; background: var(--box); }
+
+.counter {
+  margin: 10px 0 0;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ---------- footer ---------- */
+
+.keep {
+  margin-top: 26px;
+  text-align: center;
+}
+
+.keep-line {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 480px) {
+  .page { padding: 36px 12px 52px; }
+  .ticker { font-size: 26px; letter-spacing: 1px; }
+  h1 { font-size: 30px; }
+  .carousel { padding: 10px; gap: 6px; }
+  .nav { width: 30px; height: 30px; font-size: 15px; }
+}
